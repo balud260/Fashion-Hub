@@ -1,0 +1,163 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.hero-banner {
+  height: 350px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  color: white;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.shop-now-btn {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.shop-now-btn:hover {
+  transform: translateY(-2px);
+}
+
+.main-content {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.filters {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.filters h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #111827;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+}
+
+.category-list li {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #4b5563;
+  transition: all 0.2s;
+  margin-bottom: 0.3rem;
+}
+
+.category-list li:hover {
+  background-color: #f3f4f6;
+  color: #2563eb;
+}
+
+.category-list li.active {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.search-filter input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.product-grid-section {
+  flex: 1;
+}
+
+.product-grid-header {
+  margin-bottom: 2rem;
+}
+
+.product-grid-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 1rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: #2563eb;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.no-products {
+  text-align: center;
+  padding: 4rem;
+  color: #6b7280;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .hero-banner {
+    padding: 0 2rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
